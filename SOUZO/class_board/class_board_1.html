@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOUZO</title>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- SideBar-Menu CSS -->
+    <link href="../sameCSS/styles.css" rel="stylesheet" type="text/css" />
+    <link href="css/class_board.css" rel="stylesheet" type="text/css" />
+
+    <!-- Demo CSS -->
+    <link rel="stylesheet" href="css/demo.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="mobileMenu">
+        <ul>
+          <li>
+            <a href="../home/home.html"
+              ><i class="fa-solid fa-house"></i><span>首頁</span></a
+            >
+          </li>
+          <li>
+            <a href="../all_type/all_type.html"
+              ><i class="fa-solid fa-rectangle-list"></i><span>看板</span></a
+            >
+          </li>
+          <li>
+            <a href="../myCollect/myCollect.html"
+              ><i class="fa-solid fa-bookmark"></i><span>收藏</span></a
+            >
+          </li>
+          <li>
+            <a href="../map/map.html"
+              ><i class="fa-solid fa-map"></i><span>地圖</span></a
+            >
+          </li>
+          <li>
+            <a href="../allclass/allclass.html"
+              ><i class="fa-solid fa-clipboard-list mobileActive"></i><span class="mobileActive">課程</span></a
+            >
+          </li>
+          <li>
+            <a href="../myTeaching/myTeaching.html"
+              ><i class="fa-solid fa-circle-user"></i><span>個人</span></a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="top_navbar">
+        <div class="hamburger">
+          <div class="hamburger__inner">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+          </div>
+        </div>
+        <div class="menu">
+          <div class="logo">
+            <a href="../home/home.html"
+              ><img src="../sameCSS/logo2.png" alt=""
+            /></a>
+          </div>
+          <form class="search-bar">
+            <input
+              class="search-input"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button type="submit" class="search-btn">
+              <i class="fa-solid fa-magnifying-glass topicon"></i>
+            </button>
+          </form>
+          <div class="menu-icons">
+            <div class="mobileSearch" onclick="openAndClose()">
+              <i class="fa-solid fa-magnifying-glass topicon"></i>
+            </div>
+            <a href="../Edit/Edit.html"
+              ><i class="fa-regular fa-square-plus topicon2"></i
+            ></a>
+            <a href="#"><i class="fa-regular fa-bell topicon2"></i></a>
+            <a href="../myDraft/myDraft.html" class="top_person"
+              ><img
+                class="menu-channel-icon"
+                src="http:///unsplash.it/36/36?gravity=center"
+                alt="Your Channel"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div id="mSearch_drop" style="top: -100%">
+        <form class="search-bar2">
+          <input
+            class="search-input"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button type="submit" class="search-btn">
+            <i class="fa-solid fa-magnifying-glass topicon"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="main_container">
+        <div class="sidebar">
+          <div class="sidebar__inner">
+            <div class="profile hello">
+              <div class="img">
+                <img
+                  class="welcome_headimg"
+                  src="http:///unsplash.it/36/36?gravity=center"
+                  alt="profile_pic"
+                />
+              </div>
+              <div class="profile_info">
+                <p>Welcome</p>
+                <p class="profile_name">SOUZO USER</p>
+                <!-- 用戶名稱-->
+              </div>
+            </div>
+            <ul>
+              <li>
+                <a href="../home/home.html">
+                  <!-- class="active" -->
+                  <span class="icon"><i class="fa-solid fa-house"></i></span>
+                  <!-- home icon class-->
+                  <span class="title">首頁</span>
+                </a>
+              </li>
+              <li>
+                <a href="../myCollect/myCollect.html">
+                  <span class="icon"><i class="fa-solid fa-bookmark"></i></span>
+                  <span class="title">你的收藏</span>
+                </a>
+              </li>
+              <li>
+                <a href="../map/map.html">
+                  <span class="icon"><i class="fa-solid fa-map"></i></span>
+                  <span class="title">手作地圖</span>
+                </a>
+              </li>
+              <li>
+                <a href="../allclass/allclass.html">
+                  <span class="icon"
+                    ><i class="fa-solid fa-clipboard-list"></i
+                  ></span>
+                  <span class="title">手作課程</span>
+                </a>
+              </li>
+              <li>
+                <a href="../all_type/all_type.html">
+                  <span class="icon"
+                    ><i class="fa-solid fa-rectangle-list"></i
+                  ></span>
+                  <span class="title">所有看板</span>
+                </a>
+              </li>
+              <li></li>
+            </ul>
+          </div>
+          <hr class="sidebar_hr" />
+          <div class="Owncollection">
+            <p class="follow">追蹤<span>內容</span></p>
+            <a href="../favor/favor_paper.html">
+              <div class="profile">
+                <div class="img">
+                  <img
+                    src="../sameCSS/type1.png"
+                    alt=""
+                    style="border-radius: 50%"
+                  />
+                </div>
+                <div class="profile_info">
+                  <p class="profile_name">剪貼紙藝品類</p>
+                  <!-- 追蹤內容-->
+                </div>
+              </div>
+            </a>
+            <a href="../favor/favor_model.html">
+              <div class="profile">
+                <div class="img followsideimg">
+                  <img
+                    src="../sameCSS/type2.png"
+                    alt=""
+                    style="border-radius: 50%"
+                  />
+                </div>
+                <div class="profile_info">
+                  <p class="profile_name">模型類</p>
+                  <!-- 追蹤內容-->
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- left side bar結束-->
+
+        <div class="container padtitle">
+          <h1 class="bigTitle">SOUZO官方手作課_廢棄皮革拼接包</h1>
+          <div class="clear"></div>
+        </div>
+
+        <div class="container">
+          <div class="topbox">
+            <h1 class="bigTitle">SOUZO官方手作課_廢棄皮革拼接包</h1>
+          </div>
+          <div class="leftBar">
+            <div>
+              <div class="coverPic">
+                <img src="img/classBoardCover.png" alt="" />
+              </div>
+              <div class="actionBar">
+                <ul>
+                  <li>
+                    <a href="https://www.instagram.com/"
+                      ><img src="./img/instagram.png" alt=""
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://line.me/zh-hant/"
+                      ><img src="./img/line.png" alt=""
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com/"
+                      ><img src="./img/facebook.png" alt=""
+                    /></a>
+                  </li>
+                  <li class="apply">
+                    <a href="https://www.google.com/"><span>報名連結</span></a>
+                  </li>
+                  <li>
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="check_like"
+                        id="check_like"
+                      />
+                      <span class="checklike_span"
+                        ><i class="fa-solid fa-heart"></i
+                      ></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="check_collect"
+                        id="check_collect"
+                      />
+                      <span class="checkcollect_span"
+                        ><i class="fa-regular fa-bookmark"></i
+                      ></span>
+                    </label>
+                  </li>
+                  <!-- <li>
+                  <i class="fa-solid fa-share shareIt"></i>
+                </li> -->
+                </ul>
+                <div class="tags">
+                  標籤：
+                  <span>SOUZO官方</span>
+                  <span>環保</span>
+                  <span>廢物利用</span>
+                  <span>皮革</span>
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+
+            <p class="detail">SOUZO官方手作課_廢棄皮革拼接背包</p>
+
+            <table class="pad-classdetail">
+              <tr>
+                <td class="classdetail-type">活動日期：</td>
+                <td class="classdetail">2023/05/09 ~2022/05/10</td>
+              </tr>
+              <tr>
+                <td>活動地點：</td>
+                <td class="classdetail">
+                  台中市西區手作路418號B4樓
+                </td>
+              </tr>
+              <tr>
+                <td class="classdetail-type">報名截止日期：</td>
+                <td class="classdetail">2023-03-09 12:00</td>
+              </tr>
+              <tr>
+                <td class="classdetail-type">報名身分限制：</td>
+                <td class="classdetail">18歲以上</td>
+              </tr>
+              <tr>
+                <td class="classdetail-type">報名費用：</td>
+                <td class="classdetail">免費</td>
+              </tr>
+              <tr>
+                <td class="classdetail-type">講師：</td>
+                <td class="classdetail">xxx工作室 / 許阿馨</td>
+              </tr>
+              <tr>
+                <td class="classdetail-type">活動負責人：</td>
+                <td class="classdetail">朱小姐</td>
+              </tr>
+              <tr>
+                <td class="classdetail-type">連絡電話：</td>
+                <td class="classdetail">09xx-xxx-xxx</td>
+              </tr>
+              <tr>
+                <td class="classdetail-type">電子信箱：</td>
+                <td class="classdetail">xxxxxx@gmail.com</td>
+              </tr>
+              <tr>
+                <td class="classdetail-type">注意事項：</td>
+                <td class="classdetail">
+                  <br />
+                  1.報名成功後將透過信件通知，請進入信件中所建立的群組。<br />
+                  2.請自行準備信件中所提及的工具，課程現場不提供工具。<br />
+                  3.若未滿10人，本課程將延期或取消，屆時會以電話通知。<br />
+                  4.請學員務必準時，以免老師教學進度延宕。<br />
+                  5.疫情期間請於課程中全程配戴口罩，報到時將量體溫與酒精消毒。<br />
+                  6.若有身體不適、發燒、呼吸道症或腹瀉症狀者，切勿勉強參加。<br />
+                  <br />
+                </td>
+              </tr>
+              <tr>
+                <td class="classdetail-type">活動內容：</td>
+                <td class="classdetail">
+                  別人的廢物是我們的寶物，將工業生產中的皮革邊角料、剩料可以獲得更好的利用，透過個人的創意與動手，製作出屬於自己獨一無二的後背包。<br />
+                  <br />
+                  課程規劃大綱：<br />
+                  1. 認識台灣衣物放面的浪費現況<br />
+                  2. 背包打版設計、繪製版型<br />
+                  3. 組裝背包&配件製作(含背帶，夾層、裝飾的教學)。
+                </td>
+              </tr>
+            </table>
+
+            <form action="" method="get" class="messages">
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="留言..."
+              ></textarea>
+              <div class="msgBtn">
+                <i class="fa-solid fa-camera-retro"></i>
+                <i class="fa-solid fa-video"></i>
+                <div class="twoBtn">
+                  <button class="noMsg" type="reset">取消</button>
+                  <button class="sendMsg" type="submit">送出</button>
+                </div>
+              </div>
+            </form>
+            <div class="msgBoard">
+              <h2>留言板 <span>(共3則)</span></h2>
+              <ul>
+                <li>
+                  <div class="msgDetail">
+                    <i class="fa-solid fa-circle-user usericon"></i>
+                    <div>
+                      <p class="memberName">ouo_hui</p>
+                      <p class="memberMsg">推推!!</p>
+                    </div>
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="check_like"
+                        id="check_like"
+                      />
+                      <span class="checklike_span"
+                        ><i class="fa-solid fa-heart"></i
+                      ></span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="msgDetail">
+                    <i class="fa-solid fa-circle-user usericon"></i>
+                    <div>
+                      <p class="memberName">朱雀</p>
+                      <p class="memberMsg">免費的課也太佛系了吧!!</p>
+                    </div>
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="check_like"
+                        id="check_like"
+                      />
+                      <span class="checklike_span"
+                        ><i class="fa-solid fa-heart"></i
+                      ></span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="msgDetail">
+                    <i class="fa-solid fa-circle-user usericon"></i>
+                    <div>
+                      <p class="memberName">安安我是地瓜瓜</p>
+                      <p class="memberMsg">
+                        之前上過他們的課我覺得很棒，老師很有耐心。
+                        <br>推薦大家去上課~~
+                      </p>
+                    </div>
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="check_like"
+                        id="check_like"
+                      />
+                      <span class="checklike_span"
+                        ><i class="fa-solid fa-heart"></i
+                      ></span>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="rightBar">
+            <table class="web-classdetail">
+              <tr>
+                <td class="classdetail-type">活動日期：</td>
+                <td class="classdetail">023/05/09 ~2022/05/10</td>
+              </tr>
+              <tr>
+                <td>活動地點：</td>
+                <td class="classdetail">
+                  台中市西區手作路418號B4樓
+                </td>
+              </tr>
+              <tr>
+                <td class="classdetail-type">報名截止日期：</td>
+                <td class="classdetail">2023-03-09 12:00</td>
+              </tr>
+              <tr>
+                <td class="classdetail-type">報名身分限制：</td>
+                <td class="classdetail">18歲以上</td>
+              </tr>
+              <tr>
+                <td class="classdetail-type">報名費用：</td>
+                <td class="classdetail">免費</td>
+              </tr>
+              <tr>
+                <td class="classdetail-type">講師：</td>
+                <td class="classdetail">xxx工作室 / 許阿馨</td>
+              </tr>
+              <tr>
+                <td class="classdetail-type">活動負責人：</td>
+                <td class="classdetail">朱小姐</td>
+              </tr>
+              <tr>
+                <td class="classdetail-type">連絡電話：</td>
+                <td class="classdetail">09xx-xxx-xxx</td>
+              </tr>
+              <tr>
+                <td class="classdetail-type">電子信箱：</td>
+                <td class="classdetail">xxxxxx@gmail.com</td>
+              </tr>
+              <tr>
+                <td class="classdetail-type">注意事項：</td>
+                <td class="classdetail">
+                  1.報名成功後將透過信件通知，請進入信件中所建立的群組。
+                  2.請自行準備信件中所提及的工具，課程現場不提供工具。
+                  3.若未滿10人，本課程將延期或取消，屆時會以電話通知。
+                  4.請學員務必準時，以免老師教學進度延宕。
+                  5.疫情期間請於課程中全程配戴口罩，報到時將量體溫與酒精消毒。
+                  6.若有身體不適、發燒、呼吸道症或腹瀉症狀者，切勿勉強參加。
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="classdetail-type">活動內容：</td>
+                <td class="classdetail">
+                  以工業生產中的皮革邊角料、剩料為環保材料，袋代設計了可以百變搭配的版型，讓這些相對更小塊、形狀更不規則的邊角料、剩料可以獲得更好的利用，並且透過個人學習配色搭配技巧，和拼皮版型的不同形狀拼合，讓每個人都能利用邊角料皮革製作出屬於自己獨一無二的後背包。<br />
+                  <br />
+                  別人的廢物是我們的寶物，將工業生產中的皮革邊角料、剩料可以獲得更好的利用，透過個人的創意與動手，製作出屬於自己獨一無二的後背包。
+                  課程規劃大綱：
+                  1. 認識台灣衣物放面的浪費現況
+                  2. 背包打版設計、繪製版型
+                  3. 組裝背包&配件製作(含背帶，夾層、裝飾的教學)
+                  
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/e4788a2551.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!--Load jquery-ui css stylesheet -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="../sameCSS/samejs.js"></script>
+    <script src="js/class_board.js"></script>
+    <script
+      color="225,135,0"
+      opacity="1"
+      z-index="99999999"
+      content="999999999"
+      src="https://cdnjs.cloudflare.com/ajax/libs/canvas-nest.js/2.0.4/canvas-nest.js"
+      integrity="sha512-P+NGabN/TJDOnCVOFJO+E06TBm4i+M8dTT91lWg/8UpwLrzicEXIypmABPpA47D0x6r+yxFHjYIZKWhc1h7xlQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>
